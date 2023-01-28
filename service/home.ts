@@ -1,10 +1,11 @@
-import request from './index'
-export const fetchHomeInfoData = () => {
-  return request.get("/api/homeInfo", {
-    onRequest({ request, options }:any) {
-      // Set the request headers
-      console.log(request)
-      console.log(options.method)
-    },
+import { IHomeState } from '~~/store/home'
+import request, { IResultData } from './index'
+type IHomeInfoType = "oppo" | "onePlus" | "intelligent"
+export const getHomeInfoData = (type?: IHomeInfoType) => {
+  return request.get<IResultData<IHomeState>>("/home/info", {
+    params: {
+      type: type || "oppo"
+    }
   })
 }
+export { IHomeInfoType }

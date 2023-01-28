@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="app">
     <!-- head标签-Test -->
-    <Head>
+    <!-- <Head>
       <title>{{ title }}</title>
-    </Head>
+    </Head> -->
     <!-- 布局 -->
     <NuxtLayout>
       <!-- 页面 -->
@@ -13,6 +13,6 @@
 </template>
 
 <script lang="ts" setup>
-const appConfig = useAppConfig()
-const { title, theme } = appConfig
+// const appConfig = useAppConfig()
+// const { title, theme } = appConfig
 </script>

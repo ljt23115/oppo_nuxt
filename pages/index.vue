@@ -8,8 +8,8 @@
 </template>
 
 <script setup lang="ts">
-import { fetchHomeInfoData } from '@/service/home'
-const { data } = await fetchHomeInfoData()
+import { getHomeInfoData } from '@/service/home'
+const { data } = await getHomeInfoData()
 </script>
 
 <style lang="less" scoped></style>

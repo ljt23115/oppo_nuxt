@@ -1,5 +1,23 @@
-@contentWidth: 1248px;
+@contentWidth: 1264px;
+
+@headWrapperHeight: 36px;
+@headWrapperBackgroundColor: #222222;
+@headTextColor: #FFFFFF;
+@headTextSize: 12px;
+
+@navBarHeight: 84px;
+@navBarBackgroundColor: #FFFFFF;
+@navBarSize: 14px;
+@navBarBorderColor: #222222;
+
+@contentTextColor01: rgba(0,0,0,.87);
 
 .mixin-border() {
   border: 1px solid red
+}
+
+.mixin-textoneline() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

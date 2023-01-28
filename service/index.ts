@@ -1,6 +1,11 @@
 import type { AsyncData, UseFetchOptions } from "nuxt/dist/app/composables"
 
-const BASE_URL = ''
+const BASE_URL = 'http://codercba.com:9060/oppo-nuxt/api'
+
+export interface IResultData<T> {
+  code: number,
+  data: T
+}
 
 class Request {
   request<T = any>(url: string, options: UseFetchOptions<T>): Promise<AsyncData<T, Error>> {

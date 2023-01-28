@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <h2>掘金页面 制作中~</h2>
+    <h2>OPPO商城 制作中~</h2>
   </div>
 </template>
 
@@ -10,7 +10,7 @@
 .footer {
   height: 100px;
   text-align: center;
-  border-top: 1px solid red;
+  border-top: 1px solid black;
   margin-top: 50px;
 }
 </style>
