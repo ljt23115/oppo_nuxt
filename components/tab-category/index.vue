@@ -1,6 +1,6 @@
 <template>
   <div class="categoryContent">
-    <template v-for="item in categorys" key="item.id">
+    <template v-for="item in categorys" :key="item.id">
       <div class="category-item">
         <a :href="item.link" target="_blank">
           <div class="pct">

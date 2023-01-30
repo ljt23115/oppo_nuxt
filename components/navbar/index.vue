@@ -2,23 +2,11 @@
   <div class="nav-bar">
     <div class="wrapper content">
       <NuxtLink class="link logo">
-        <img src="OPPO_logo.png" alt="" height="50" />
+        <img src="public/OPPO_logo.png" alt="" height="50" />
         <h1 class="title">OPPO手机商城</h1>
       </NuxtLink>
       <div class="linkTags">
-        <!-- <NuxtLink class="link tag">
-          <span>OPPO专区</span>
-        </NuxtLink>
-        <NuxtLink class="link tag">
-          <span>OnePlus专区</span>
-        </NuxtLink>
-        <NuxtLink class="link tag">
-          <span>智能硬件</span>
-        </NuxtLink>
-        <NuxtLink class="link tag">
-          <span>服务</span>
-        </NuxtLink> -->
-        <template v-for="item of navbars" key="item.id">
+        <template v-for="item of navbars" :key="item.id">
           <NuxtLink class="link tag" @click="goToOtherPage(item.type)">
             <span>{{ item.title }}</span>
           </NuxtLink>
@@ -45,7 +33,7 @@ const props = withDefaults(defineProps<INavBarProps>(), {
 
 const { navbars } = toRefs(props)
 
-function goToOtherPage(type: string = 'oppo') {
+function goToOtherPage(type = 'oppo') {
   let path = '/'
   if (type !== 'oppo') {
     path += type
