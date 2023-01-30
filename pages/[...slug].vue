@@ -1,9 +1,13 @@
 <template>
-  <div>
+  <div class="not-found">
     <h2>404 NOT FOUND!</h2>
   </div>
 </template>
 
 <script setup></script>
 
-<style lang="scss" scoped></style>
+<style lang="less" scoped>
+.not-found {
+  margin-top: 150px;
+}
+</style>

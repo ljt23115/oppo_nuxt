@@ -2,10 +2,10 @@
   <div class="header">
     <div class="wrapper content">
       <div class="ctnLeft">
-        <NuxtLink class="link lLink" to="/home">
+        <NuxtLink class="link lLink" to="/">
           <span>OPPO 官网</span>
         </NuxtLink>
-        <NuxtLink class="link lLink" to="/yijia">
+        <NuxtLink class="link lLink" to="/onePlus">
           <span>一加官网</span>
         </NuxtLink>
       </div>
@@ -44,18 +44,14 @@
   height: @headWrapperHeight;
   width: 100%;
   background-color: @headWrapperBackgroundColor;
-  padding: 0 8px;
+  // padding: 0 8px;
   color: @headTextColor;
   font-size: @headTextSize;
   box-sizing: inherit;
 
-  // display: flex;
-  // flex: 1;
-
   .wrapper {
-    width: @contentWidth;
+    .mixin-contentWidth();
     background-color: @headWrapperBackgroundColor;
-    margin: 0 auto;
     padding: 8px;
     line-height: 18px;
 

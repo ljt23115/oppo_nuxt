@@ -8,9 +8,6 @@ export default defineNuxtConfig({
   build: {
     // 使用Babel 进行语法转换
     transpile: ["element-plus/es"],
-    // styleResources: {
-    //   less: './assets/css/variable.less'
-    // }
   },
   app: {
     // 可以给所有的页面添加SEO信息

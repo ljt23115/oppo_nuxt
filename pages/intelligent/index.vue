@@ -22,7 +22,8 @@ import { storeToRefs } from 'pinia'
 import { useHomeStore } from '~~/store/home'
 
 const homeStore = useHomeStore()
-homeStore.fetchHomeInfoData('oppo')
+
+homeStore.fetchHomeInfoData('intelligent')
 
 const { banners, categorys } = storeToRefs(homeStore)
 </script>

@@ -1,4 +1,4 @@
-import { IHomeState } from '~~/store/home'
+import { IHomeState } from '~~/store/type'
 import request, { IResultData } from './index'
 type IHomeInfoType = "oppo" | "onePlus" | "intelligent"
 export const getHomeInfoData = (type?: IHomeInfoType) => {

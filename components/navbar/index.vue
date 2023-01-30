@@ -19,7 +19,7 @@
           <span>服务</span>
         </NuxtLink> -->
         <template v-for="item of navbars" key="item.id">
-          <NuxtLink class="link tag" :to="item.link" target="_blank">
+          <NuxtLink class="link tag" @click="goToOtherPage(item.type)">
             <span>{{ item.title }}</span>
           </NuxtLink>
         </template>
@@ -33,17 +33,34 @@
 </template>
 
 <script setup lang="ts">
-import type { INavbar } from '@/store/home'
+import type { INavbar } from '@/store/type'
 
-export interface IProps {
+export interface INavBarProps {
   navbars: INavbar[]
 }
 
-const props = withDefaults(defineProps<IProps>(), {
+const props = withDefaults(defineProps<INavBarProps>(), {
   navbars: () => []
 })
 
 const { navbars } = toRefs(props)
+
+function goToOtherPage(type: string = 'oppo') {
+  let path = '/'
+  if (type !== 'oppo') {
+    path += type
+  }
+  return navigateTo(path)
+}
+
+// //处理navbars的link
+// navbars?.value?.forEach((item) => {
+//   if (item.type !== 'oppo') {
+//     item.link = `/${item.type}`
+//   } else {
+//     item.link = '/'
+//   }
+// })
 </script>
 
 <style scoped lang="less">
@@ -51,15 +68,15 @@ const { navbars } = toRefs(props)
   height: @navBarHeight;
   width: 100%;
   background-color: @navBarBackgroundColor;
-  padding: 0 8px;
+  // padding: 0 8px;
   // border: 1px solid @navBarBorderColor;
+  padding-top: 36px;
   color: @contentTextColor01;
   font-size: @navBarSize;
 
   .wrapper {
-    width: @contentWidth;
+    .mixin-contentWidth();
     height: 68px;
-    margin: 0 auto;
     padding: 8px;
     line-height: 24px;
 
