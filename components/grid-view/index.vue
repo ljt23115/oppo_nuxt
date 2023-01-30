@@ -8,7 +8,7 @@
             <img :src="item.url" alt="" />
           </a>
         </div>
-        <template v-for="prodItem in item.productDetailss" key="prodItem.id">
+        <template v-for="prodItem in item.productDetailss" :key="prodItem.id">
           <div class="grid-item">
             <a :href="prodItem.link" target="_blank" class="goods-card">
               <div class="goods-img">

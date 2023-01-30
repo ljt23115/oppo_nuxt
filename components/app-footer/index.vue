@@ -2,7 +2,7 @@
   <div class="footer">
     <div class="content">
       <div class="guarantee">
-        <template v-for="item in footerIcon" key="item.id">
+        <template v-for="item in footerIcon" :key="item.id">
           <div class="guar-item">
             <img :src="item.pctUrl" alt="" />
             <span>{{ item.msg }}</span>
@@ -10,10 +10,10 @@
         </template>
       </div>
       <div class="prod">
-        <template v-for="item in footerInfo" key="item.id">
+        <template v-for="item in footerInfo" :key="item.id">
           <div class="prod-item">
             <div class="prod-title">{{ item.title }}</div>
-            <template v-for="subItem in item.products" key="subItem.id">
+            <template v-for="subItem in item.products" :key="subItem.id">
               <a href="#">{{ subItem.name }}</a>
             </template>
           </div>

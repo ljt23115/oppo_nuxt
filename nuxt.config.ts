@@ -40,8 +40,17 @@ export default defineNuxtConfig({
           additionalData: '@import "@/assets/css/variables.less";'
         }
       }
-    }
+    },
   },
 
 
+
 })
+function removeSync(publicDir: any) {
+  throw new Error('Function not implemented.')
+}
+
+function join(rootDir: any, arg1: string, arg2: string) {
+  throw new Error('Function not implemented.')
+}
+
